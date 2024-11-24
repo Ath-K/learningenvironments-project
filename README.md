@@ -9,6 +9,9 @@ This is a team project, part of the course Learning Environments & Technologies 
 
 ## What is included in the project
 
+> index.html : Main project file
+> Folder: images
+> Folder: media 
 
 ## How to run the project 
 
