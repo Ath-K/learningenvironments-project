@@ -27,6 +27,11 @@ img {
   /* if image is small, set max-width and max-height so that it doesn't stretch */
 }
 
+#test {
+	display: flex;
+
+}
+
 tw-link {
 	color: #fff;
 }
@@ -72,13 +77,15 @@ h1 {
 </script><tw-tag name="scripts" color="orange"></tw-tag><tw-passagedata pid="1" name="Page1A" tags="" position="350,100" size="100,100">Maya is a 16-year-old high school student. Her classmates know her as a cheerful person who often shares her life on Instagram. Even though she seems outgoing and confident online, Maya feels stressed and upset. 
 She recently had a bad argument with her close friend, Lena, and to let out her feelings, she writes an emotional post on Instagram.
 
-(set: $imgList to (a: &quot;https://i.imgur.com/Jbx4iIe.gif&quot;, &quot;https://i.imgur.com/y28exDH.png&quot;))
+&lt;!--(set: $imgList to (a: &quot;https://i.imgur.com/Jbx4iIe.gif&quot;, &quot;https://i.imgur.com/y28exDH.png&quot;))--&gt;
+(set: $imgList to (a: &quot;./images/Page1B.gif&quot;, &quot;./images/DeleteIt.png&quot;, &quot;./images/LeaveItUp.gif&quot;, &quot;./images/Next1.gif&quot;, &quot;./images/RespondPublicly1.png&quot;, &quot;./images/RespondPublicly2.gif&quot;, &quot;./images/SendDM.png&quot;, &quot;./images/Next2.gif&quot;, &quot;./images/ApologizePublicly.gif&quot;, &quot;./images/StaySilent.png&quot;, &quot;./images/Next3.gif&quot;, &quot;./images/Next3.png&quot;, &quot;./images/Next4.png&quot;, &quot;./images/TakeABreak.png&quot;, &quot;./images/DontTakeABreak.gif&quot;, &quot;./images/JoinSports.png&quot;, &quot;./images/StartJournal.png&quot;, &quot;./images/ArgueWithMom.png&quot;, &quot;./images/Calm.png&quot;, &quot;./images/PubliclyApologize.gif&quot;, &quot;./images/ReactPrivately.png&quot;, &quot;./images/WhatHappensNext.gif&quot;))
 
-&lt;!--(track: &#39;page1&#39;, &#39;loop&#39;, true)
-(track: &#39;page1&#39;, &#39;playwhenpossible&#39;)
---&gt;
 
-(button:) [[ (track: &#39;page1&#39;, &#39;play&#39;)]]
+&lt;!--(track: &#39;page1&#39;, &#39;loop&#39;, false)
+(track: &#39;page1&#39;, &#39;playwhenpossible&#39;)--&gt;
+
+
+
 &lt;!--{
 (link-repeat: &#39;Play sound&#39;)[
     (track: &#39;page1&#39;, &#39;play&#39;)
@@ -95,20 +102,30 @@ She recently had a bad argument with her close friend, Lena, and to let out her 
  	&lt;button&gt;[[Next]]&lt;/button&gt;
  &lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Leave it up?" tags="" position="650,200" size="100,100">    Maya decides to leave it up, hoping it will silently express her side of the story. But as the hours pass, the post gains attention, and soon everyone at school, including Lena, has seen it. Lena realises the post is about her, which makes her feel hurt and betrayed. 
     
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 3rd + &#39;&quot;&gt;&#39;)
+
 &lt;div class=&quot;buttonWrapper&quot;&gt;
  	&lt;button&gt;[[Next]]&lt;/button&gt;
  &lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Next" tags="" position="875,50" size="100,100">In reaction to Maya’s post, Lena makes her own post talking about the argument, stating her side publicly without directly naming Maya. It doesn’t take long for friends to combine the dots. The school’s social circle quickly divides into “Team Maya” and “Team Lena.” 
 
 Now, Maya has to decide her next move: 
 
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 4th + &#39;&quot;&gt;&#39;)
+
 &lt;div class=&quot;buttonWrapper&quot;&gt;
 &lt;button&gt;[[Respond publicly with a mean comment on Lena’s post?]]&lt;/button&gt;
 &lt;button&gt;[[Send a direct message to Lena asking why she posted it?]]&lt;/button&gt;
 &lt;div&gt;</tw-passagedata><tw-passagedata pid="5" name="Respond publicly with a mean comment on Lena’s post?" tags="" position="850,175" size="100,100">    Maya writes a mean and sarcastic comment on Lena’s post, which causes a big reaction. Other students start writing mean comments, not only about Lena but also about Maya. Insults are coming from all sides, and soon both Maya and Lena are at the center of a lot of gossip, rumors, and drama that they can’t stop. 
-    
+
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 5th + &#39;&quot;&gt;&#39;)
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 6th + &#39;&quot;&gt;&#39;)
+
+
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Next ]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Send a direct message to Lena asking why she posted it?" tags="" position="1150,125" size="100,100">    Maya sends a private message to Lena, asking why she made their argument public. But Lena ignores her, hoping it will all calm down on its own and the argument will go away. The silence makes Maya feel anxious and angry. Meanwhile, rumors start spreading online about why they argued, and their classmates begin choosing sides without knowing the full story. 
+    
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 7th + &#39;&quot;&gt;&#39;)
 
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Next ]]&lt;/button&gt;
@@ -116,37 +133,40 @@ Now, Maya has to decide her next move:
 
 Should Maya try to fix the situation by apologising? 
 
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 8th + &#39;&quot;&gt;&#39;)
+
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Yes: Apologise publicly? ]]&lt;/button&gt;
 &lt;button&gt;[[No: Stay silent? ]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Yes: Apologise publicly? " tags="" position="875,450" size="100,100">    Maya decides to post a sincere apology. Many people feel sorry for her and see her honesty. They think Lena went too far by sharing something so personal, so most people start unfollowing Lena. Maya receives kind messages from friends who support her for being humble. 
 
+
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 9th + &#39;&quot;&gt;&#39;) 
+
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Next  ]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="No: Stay silent? " tags="" position="1125,450" size="100,100">    Maya chooses to stay silent, hoping things will calm down by themselves. But this plan backfires. Many people now believe that Maya started the problem, and they think Lena only reacted. Sympathy goes to Lena, and Maya loses followers and friends who had supported her before. 
-    
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 10th + &#39;&quot;&gt;&#39;)     
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Next  ]]&lt;/button&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="10" name="Next  " tags="" position="975,575" size="100,100">Upset by everything that has happened, Maya meets up with a friend who invites her to lunch to help her feel better. They take a quick photo together, which Maya posts on her Instagram Story, tagging the location of the cosy café where they are eating. 
+</tw-passagedata><tw-passagedata pid="10" name="Next  " tags="" position="1000,500" size="100,100">Upset by everything that has happened, Maya meets up with a friend who invites her to lunch to help her feel better. They take a quick photo together, which Maya posts on her Instagram Story, tagging the location of the cosy café where they are eating. 
 
 However, Lena’s older sister sees the tagged location. Frustrated, she decides to confront Maya. She arrives at the café with a friend, and a tense conversation quickly turns into an argument. The friend of Lena’s sister records the fight on video and starts live-streaming it on Instagram. 
-
-Overwhelmed by all this chaos, Maya goes home, feeling tired and unsure of what to do next. 
-
-Maya thinks about whether she should take a break from social media. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 11th + &#39;&quot;&gt;&#39;) 
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 12th + &#39;&quot;&gt;&#39;) 
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
-&lt;button&gt;[[Take a break?]]&lt;/button&gt;
-&lt;button&gt;[[Don&#39;t take a break?]]&lt;/button&gt;</tw-passagedata><tw-passagedata pid="11" name="Take a break?" tags="" position="625,775" size="100,100">    Maya decides to take a break from social media. She makes her accounts private and turns off notifications. For the first time in days, she feels a little better. But now, she has free time and doesn’t know what to do with it. 
+&lt;button&gt;[[Next   ]]&lt;/button&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Take a break?" tags="" position="625,775" size="100,100">    Maya decides to take a break from social media. She makes her accounts private and turns off notifications. For the first time in days, she feels a little better. But now, she has free time and doesn’t know what to do with it. 
     
 With social media switched off, Maya thinks about how to fill her free time. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 14th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Join a sports club?]]&lt;/button&gt;
 &lt;button&gt;[[Start a journal?]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Don&#39;t take a break?" tags="" position="1200,650" size="100,100">    Maya decides to keep posting and commenting to share her side of the story and express her anger toward people she feels have hurt her. Eventually, her mom sees one of Maya’s comments on the live-streamed video and, shocked, asks Maya what is happening. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 15th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Listen to her mom?]]&lt;/button&gt;
 &lt;button&gt;[[Argue with her mom?]]&lt;/button&gt;
@@ -157,34 +177,34 @@ With social media switched off, Maya thinks about how to fill her free time.
 &lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="14" name="Argue with her mom?" tags="" position="1250,825" size="100,100">    Maya argues with her mom and becomes more defensive and upset. Hours go by as she scrolls through posts, reads comments, and writes hurtful replies. As things get worse, she starts to think, “What’s the point of all this?” By this time, she feels like the damage is already done. 
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 18th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[What do you think happens next?]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="Join a sports club?" tags="" position="575,900" size="100,100">    Maya joins a local sports club. At first, she feels a bit uncomfortable because some members are on Lena&#39;s side. However, playing sports helps her release her emotions. She quickly realises that she can use her frustration in a positive way instead of letting it build up online. Lena’s friends also start to talk with Maya and they realise that the situation was not so bad in reality than on social media. They soon opened up to Maya and learned more about her personality. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 16th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Step by step, Maya finds herself feeling calmer and more at peace.|Calm]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Start a journal?" tags="" position="775,900" size="100,100">    Maya finds an old notebook and starts writing in it. Each night, she writes down her feelings, and she discovers that this private way of expressing herself helps her understand her emotions better than posting online ever did. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 17th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[Step by step, Maya finds herself feeling calmer and more at peace.|Calm]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Calm" tags="" position="675,1075" size="100,100">After some time thinking about herself, Maya feels ready to try to fix her friendship with Lena. However, she isn’t sure how to start, especially since so much has been shared publicly. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 19th + &#39;&quot;&gt;&#39;)
 Should she... 
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[ Make a public post about her apology? ]]&lt;/button&gt;
 &lt;button&gt;[[Reach out privately via text?]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name=" Make a public post about her apology? " tags="" position="675,1200" size="100,100">    Maya decides to make a public post, tagging Lena and apologising for what happened. The post gets mixed reactions from their classmates, and Maya realises that this public apology might have made the drama last longer instead of fixing it. 
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 20th + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[What do you think happens next?]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="19" name="Reach out privately via text?" tags="" position="900,1175" size="100,100">Maya decides to contact Lena privately by sending a heartfelt message. In it, she shares her feelings, expresses her regrets, and hopes for forgiveness. Although she is unsure how Lena will respond, Maya feels a sense of peace from being honest and expressing herself without the pressure of the public.
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 21st + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;    
 &lt;button&gt;[[What do you think happens next?]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="What do you think happens next?" tags="" position="1250,950" size="100,100">You can type your answer here:
-
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 22nd + &#39;&quot;&gt;&#39;)
 (input-box:&quot;=XX=&quot;,&quot;&quot;)
-
 &lt;button&gt;Enter&lt;/button&gt;</tw-passagedata><tw-passagedata pid="21" name="hal.tracks" tags="" position="250,425" size="100,100">page1: ../Stories/media/Page1DeleteIt.mp3</tw-passagedata><tw-passagedata pid="22" name="Starter" tags="hal.tracks" position="200,125" size="100,100">&lt;h1&gt;Public Posts, Private Regrets: A story about friendship&lt;/h1&gt;
 
 
@@ -205,12 +225,18 @@ Should she...
 The post reads: “I’m done with people who pretend to care but disappear the second things get real.” 
 As she reads it over, she feels a mix of relief and regret. Now, she faces a decision:
 
-(set: $imgList to (a: &quot;https://i.imgur.com/Jbx4iIe.gif&quot;, &quot;https://i.imgur.com/y28exDH.png&quot;))
+&lt;!--(set: $imgList to (a: &quot;https://i.imgur.com/Jbx4iIe.gif&quot;, &quot;https://i.imgur.com/y28exDH.png&quot;))--&gt;
 (print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 1st + &#39;&quot;&gt;&#39;)
 &lt;div class=&quot;buttonWrapper&quot;&gt;
 	&lt;button&gt;[[Delete it?]]&lt;/button&gt;
 	&lt;button&gt;[[Leave it up?]]&lt;/button&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name=" (track: &#39;page1&#39;, &#39;play&#39;)" tags="" position="350,225" size="100,100"></tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Next   " tags="" position="975,650" size="100,100">Overwhelmed by all this chaos, Maya goes home, feeling tired and unsure of what to do next. 
+
+Maya thinks about whether she should take a break from social media. 
+(print: &#39;&lt;img src=&quot;&#39; + $imgList&#39;s 13th + &#39;&quot;&gt;&#39;)
+&lt;div class=&quot;buttonWrapper&quot;&gt;    
+&lt;button&gt;[[Take a break?]]&lt;/button&gt;
+&lt;button&gt;[[Don&#39;t take a break?]]&lt;/button&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
