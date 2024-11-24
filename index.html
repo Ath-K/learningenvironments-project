@@ -74,6 +74,16 @@ She recently had a bad argument with her close friend, Lena, and to let out her 
 
 (set: $imgList to (a: &quot;https://i.imgur.com/Jbx4iIe.gif&quot;, &quot;https://i.imgur.com/y28exDH.png&quot;))
 
+&lt;!--(track: &#39;page1&#39;, &#39;loop&#39;, true)
+(track: &#39;page1&#39;, &#39;playwhenpossible&#39;)
+--&gt;
+
+(button:) [[ (track: &#39;page1&#39;, &#39;play&#39;)]]
+&lt;!--{
+(link-repeat: &#39;Play sound&#39;)[
+    (track: &#39;page1&#39;, &#39;play&#39;)
+]
+}--&gt;
 &lt;div class=&quot;buttonWrapper&quot;&gt;
 	&lt;button&gt;[[Next|Page1B]]&lt;/button&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="Delete it?" tags="" position="625,25" size="100,100">    Maya deletes the post, but before she knows it, someone has already screenshotted it. Soon, her message starts circulating among friends, becoming the topic of whispers and group chats. Word quickly gets back to Lena, who realises the post is about her, which makes her feel hurt and betrayed. 
@@ -175,7 +185,7 @@ Should she...
 
 (input-box:&quot;=XX=&quot;,&quot;&quot;)
 
-&lt;button&gt;Enter&lt;/button&gt;</tw-passagedata><tw-passagedata pid="21" name="hal.tracks" tags="" position="250,425" size="100,100">page1: ./audios/Page1DeleteIt.mp3</tw-passagedata><tw-passagedata pid="22" name="Starter" tags="hal.tracks" position="200,125" size="100,100">&lt;h1&gt;Public Posts, Private Regrets: A story about friendship&lt;/h1&gt;
+&lt;button&gt;Enter&lt;/button&gt;</tw-passagedata><tw-passagedata pid="21" name="hal.tracks" tags="" position="250,425" size="100,100">page1: ../Stories/media/Page1DeleteIt.mp3</tw-passagedata><tw-passagedata pid="22" name="Starter" tags="hal.tracks" position="200,125" size="100,100">&lt;h1&gt;Public Posts, Private Regrets: A story about friendship&lt;/h1&gt;
 
 
 &lt;!--
@@ -200,7 +210,7 @@ As she reads it over, she feels a mix of relief and regret. Now, she faces a dec
 &lt;div class=&quot;buttonWrapper&quot;&gt;
 	&lt;button&gt;[[Delete it?]]&lt;/button&gt;
 	&lt;button&gt;[[Leave it up?]]&lt;/button&gt;
-&lt;/div&gt;</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name=" (track: &#39;page1&#39;, &#39;play&#39;)" tags="" position="350,225" size="100,100"></tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
